@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const jumpHeight = -20
-const gravity = 200
+const jumpHeight = -500
+const gravity = 9999999999999999
 
 @onready var sprite = $SkibidiPlayer
 @onready var animationPlayer = $AnimationPlayer
