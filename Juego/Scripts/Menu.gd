@@ -12,10 +12,10 @@ func _process(delta):
 
 
 func _on_jugar_pressed():
-	get_tree().change_scene("res://Escenas/Inicio.tscn")
+	get_tree().change_scene_to_file("res://Escenas/Inicio.tscn")
 
 
 func _on_salir_pressed():
-	queue_free()
+	get_tree().quit()
 	# Replace with function body.
-
+	

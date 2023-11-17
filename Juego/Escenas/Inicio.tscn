@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://b7jgnpt5rp0jj"]
+[gd_scene load_steps=3 format=3 uid="uid://cp6pg0qi6vsm5"]
+
+[ext_resource type="Script" path="res://Scripts/Personaje Inicio.gd" id="1_lh8fl"]
+[ext_resource type="Texture2D" uid="uid://dlruiognv4ihk" path="res://Sprites/Skibidi Toilet.png" id="2_5jfvc"]
 
 [node name="Inicio" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_lh8fl")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_5jfvc")
+hframes = 3
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
