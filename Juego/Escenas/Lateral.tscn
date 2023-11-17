@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjftfru5ciax7"]
+
+[ext_resource type="Script" path="res://Escenas/Personaje.gd" id="1_xmoij"]
+[ext_resource type="Texture2D" uid="uid://c83fpfe2ostv8" path="res://Rocky Roads/Enemies/slime_blue.png" id="2_h27rj"]
+[ext_resource type="Script" path="res://Escenas/Jugador.gd" id="3_a5woo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhwiu"]
+
+[node name="Lateral" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_xmoij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_yhwiu")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, -4)
+texture = ExtResource("2_h27rj")
+hframes = 5
+vframes = 2
+script = ExtResource("3_a5woo")
